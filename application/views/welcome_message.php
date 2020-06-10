@@ -14,6 +14,7 @@
     <div class="columns">
       <div class="left">
         <p>Script feito em PHP com framework CodeIgniter 3! o script todo esta no GITHUB para avaliação. </p>
+        <a href="https://github.com/vitolike/picpay"> Link do GitHub </a>
 
 
       </div>
