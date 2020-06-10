@@ -23,3 +23,5 @@ Pronto você já pode acessar pela URL configurada.
 # DEMO URL: http://ec2-18-216-69-35.us-east-2.compute.amazonaws.com/
 
 Fiz esse codigo em 4 horas para apresentar ao pessoal do Picpay como forma de avalição tecnica, qualquer mal uso não serei responsavel. 
+
+Meu linkedin: https://www.linkedin.com/in/violiveira/
