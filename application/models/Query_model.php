@@ -11,6 +11,13 @@ class Query_model extends CI_Model {
 	{
         $this->db->where('usuario', $id);
 		return $this->db->get('cartao')->result();   
+    }
+    
+    public function get_saldo($id)
+	{
+        $this->db->select('saldo');
+        $this->db->where('id', $id);
+		return $this->db->get('usuarios')->result();   
 	}
 
 }

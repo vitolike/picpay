@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://ec2-18-216-69-35.us-east-2.compute.amazonaws.com/';
+$config['base_url'] = 'http://localhost/picpay/';
 
 /*
 |--------------------------------------------------------------------------

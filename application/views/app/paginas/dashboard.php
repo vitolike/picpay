@@ -164,7 +164,6 @@
                 </div>
                 <p class="text-center font-weight-bold">@<?= $this->session->tagname; ?></p>
                 <br />
-                <br />
                 <ion-content>
                 <ion-item-divider>
                     <ion-label>
@@ -185,18 +184,12 @@
                             <p><?= $this->session->celular; ?></p>
                         </ion-label>
                     </ion-item>
-                    <ion-item>
-                        <ion-label>
-                            <h2>Meu e-mail</h2>
-                            <p><?= $this->session->email; ?></p>
-                        </ion-label>
-                    </ion-item>
+
                     <ion-item>
                         <ion-label>Alterar dados pessoais</ion-label>
                     </ion-item>
                     <ion-item href="sair">
                         <ion-label>Sair da conta</ion-label>
-                        
                     </ion-item>
                 </ion-list>
                 </ion-card-content>
@@ -208,7 +201,7 @@
         </ion-tab>
 
         <ion-tab-bar slot="bottom">
-            <ion-tab-button tab="tab-inicio" color="success">
+            <ion-tab-button tab="tab-inicio">
                 <ion-icon name="home-outline"></ion-icon>
                 <ion-label>Inicio</ion-label>
             </ion-tab-button>
@@ -344,18 +337,12 @@ $("#add-cartao").submit(function(event){
 
         $('#csaldo').replaceWith('R$ <?= $this->session->saldo; ?>');
         swal({title: "Pronto!", text: "Cartão adicionado com sucesso a sua conta!", type: 
-            "success"}),(function(){ 
-              window.location.reload();
+            "success"}),(function(){
               }
             );
 	});
 });
-$('#autocomplete').autocomplete({
-    serviceUrl: '<?php echo site_url('app/tagname')?>"',
-    onSelect: function (suggestion) {
-        alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-    }
-});
+
 </script>
 <script type="text/javascript">
 $("#add-dinheiro").submit(function(event){
@@ -368,12 +355,13 @@ $("#add-dinheiro").submit(function(event){
 		data : form_data
 	}).done(function(response){ //
         $('#add').modal('hide');
-     
+        console.log(response);
+
         swal({title: "Pronto!", text: "Foi adicionado fundos na sua conta!", type: 
-            "success"}),(function(){ 
-              window.location.reload();
+            "success"}),(function(){               
               }
             );
+        location.reload();
 	});
 });
 </script>

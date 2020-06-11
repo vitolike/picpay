@@ -68,19 +68,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <form id="criar">
         <div class="form-group">
             <label for="formGroupExampleInput">Nome</label>
-            <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex: Victor">
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex: Victor" required>
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Celular</label>
-            <input type="text" class="form-control" id="celular" name="celular" placeholder="Ex: (11) 99999-9999">
+            <input type="text" class="form-control" id="celular" name="celular" placeholder="Ex: (11) 99999-9999" required>
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Nome de usuário</label>
-            <input type="text" class="form-control" id="tagname" name="tagname" placeholder="Ex: vitao">
+            <input type="text" class="form-control" id="tagname" name="tagname" placeholder="Ex: vitao" required>
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Crie uma senha</label>
-            <input type="password" class="form-control" name="senha" id="senha">
+            <input type="password" class="form-control" name="senha" id="senha" required>
         </div>
         
       </div>
@@ -105,11 +105,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <form method="post" role="form" action="<?= base_url(); ?>app/logar">
         <div class="form-group">
             <label for="formGroupExampleInput2">Nome de usuário</label>
-            <input type="text" class="form-control" name="tagname" placeholder="Ex: vitao">
+            <input type="text" class="form-control" name="tagname" placeholder="Ex: vitao" required>
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Senha</label>
-            <input type="password" class="form-control" name="senha">
+            <input type="password" class="form-control" name="senha" required>
         </div>
         
       </div>

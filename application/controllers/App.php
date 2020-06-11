@@ -41,7 +41,7 @@ class App extends CI_Controller {
 			redirect('app/dashboard');
 		}
 		else{
-			redirect('');
+			redirect('app');
 		}
 		
     }
@@ -80,17 +80,19 @@ class App extends CI_Controller {
     }
     public function add_dinheiro()
 	{
-        $data = $this->input->post();
+
         $user = $this->session->id;
 
+        $query['saldo'] = $this->Query_model->get_saldo($user);
+
         $newdata = array(
-            'saldo'  => ($this->session->saldo + $this->input->post('saldo')),
+            'saldo'  => ($query['saldo'][0]->saldo  + $this->input->post('saldo')),
         );
 
         $this->session->set_userdata($newdata);
         
         $this->db->where('id', $user);
-        if($this->db->update('usuarios',$data)){
+        if($this->db->update('usuarios',$newdata)){
         
             $arr = array('msg' => 'Criado com sucesso');
                 header('Content-Type: application/json');
